@@ -25,8 +25,10 @@ typedef struct {
 } Pokemon;
 
 int load_pokedex(const char *filename, Pokemon pokedex[]);
-void create_empty_pokedex(int height, int width, char grid[height][width]);
-void create_pokedex_entry(int height, int width, char grid[height][width], Pokemon pokedex[], int id);
-void print_pokedex(int height, int width, char grid[height][width]);
+void create_empty_pokedex(char grid[HEIGHT][WIDTH]);
+void create_pokedex_entry(char grid[HEIGHT][WIDTH], Pokemon pokedex[], int id);
+void print_pokedex(char grid[HEIGHT][WIDTH]);
+void search_name(char grid[HEIGHT][WIDTH], Pokemon pokedex[], int countPokemon);
+void search_typ(char grid[HEIGHT][WIDTH], Pokemon pokedex[], int countPokemon);
 
 #endif
